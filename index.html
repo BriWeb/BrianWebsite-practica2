@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Segunda página de prueba hecha por Brian">
+  <meta name="keywords" content="Brian, practica2" />
+  <link rel="icon" href="./assets/images/favicon.png">
+  <link rel="stylesheet" href="./main.css">
+
+  <title>Website práctica 2</title>
+</head>
+<body>
+  <header>
+    <h1 class="tittle">
+      Formulario de contacto
+    </h1>
+  </header>
+  <main>
+    <p class="paragraph-info">*Los datos ingresados no serán expuestos en ningún sítio, sólo se visualizarán en la pantalla luego de completarlos, de forma interactiva y con fines didácticos.</p>
+    <form class="form">
+      <fieldset>
+        <legend>Datos personales</legend>
+        <input type="text" name="name" class="form__input clear" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" title="Sólo debe introducir letras y espacios" placeholder="Introduzca su nombre" required autocomplete="off">
+        <input type="text" name="nickname" class="form__input clear" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" title="Sólo debe introducir letras y espacios" placeholder="Introduzca su apodo" required autocomplete="off">
+        <input type="number" name="age" class="form__input clear" pattern="^[0-9]{2}$" max="90" min="10" title="El rango debe estar entre 10 y 90" placeholder="Introduzca su edad" required autocomplete="off">
+        <div class="radio-container">
+          <label for="man">Hombre</label>
+          <input type="radio" name="gender" value="man" class="clear" required>
+          <label for="woman">Mujer</label>
+          <input type="radio" name="gender" value="woman" class="clear" required>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Datos</legend>
+        <input type="email" name="email" class="form__input clear" pattern="^[a-z0-9]+[\._0-9a-z]*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" title="Escribe un email válido" placeholder="Introduzca su email" required autocomplete="off">
+        <textarea name="message" class="form__textarea clear" data-pattern="^.{5,254}$" title="Mensaje es obligatorio, mínimo 5 letras" cols="60" rows="10" required placeholder="Introduzca el mensaje" autocomplete="off" minlength="5"></textarea>
+      </fieldset>
+      <input type="submit" class="form__submit" value="Ver datos">
+    </form>
+    <div class="loader-container none">
+      <img src="./assets/images/spinning-circles.svg" class="loader" alt="loader">
+    </div>
+    <div class="user none">
+      <p class="user__dates"></p>
+      <p>Su mensaje ha sido: 
+        <span class="user__message"></span>
+        <hr>
+        👋🥰
+      </p>
+    </div>
+  </main>
+  <script src="./index.js" type="module"></script>
+</body>
+</html>
