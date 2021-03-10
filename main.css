@@ -177,5 +177,34 @@ textarea::placeholder {
   font-weight: bold;
 }
 
+footer {
+  background-color: teal;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  /* text-align: center; */
+}
+
+.footer__list {
+  display: flex;
+}
+
+.footer__item {
+  margin-left: 0.3rem;
+  margin-right: 0.3rem;
+  list-style: none;
+}
+
+.footer__link {
+  font-size: 1.1rem;
+}
+
+@media screen and (min-width: 480px) {
+  .footer__item {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+
 @media screen and (min-width: 720px) {
 }
